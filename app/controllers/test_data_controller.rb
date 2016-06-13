@@ -28,8 +28,9 @@ class TestDataController < ApplicationController
     puts '=================='
     puts params
     puts '=================='
-    response['message'] = "oh yea!"
-    render json: response 
+    data = Hash.new
+    data['message'] = "oh yea!"
+    render json: data 
   end
 
   # POST /test_data
